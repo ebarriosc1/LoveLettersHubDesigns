@@ -1,0 +1,30 @@
+<svg width="1000" height="400" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Define Linear Gradient -->
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="hotpink"/>   <!-- Dark Color -->
+            <stop offset="100%" stop-color="lightpink"/> <!-- Light Color -->
+        </linearGradient>
+
+        <!-- Font Styling -->
+        <style>
+            @font-face {
+                font-family: 'BrotherSignature';
+                src: url('assets/BrotherSignature.otf') format('opentype');
+            }
+            .custom {
+                font-family: 'BrotherSignature', sans-serif;
+                font-size: 100px;
+                fill: url(#textGradient); /* Apply Gradient */
+            }
+        </style>
+    </defs>
+
+    <!-- Ensure Transparent Background -->
+    <rect width="100%" height="100%" fill="none"/>
+
+    <!-- Text with Gradient Fill -->
+    <text x="50%" y="50%" class="custom" text-anchor="middle" dominant-baseline="middle">
+        LoveLettersHub
+    </text>
+</svg>
