@@ -1,0 +1,99 @@
+body {
+  background: #323232;
+  color: #ededed;
+}
+a {
+  color: #ededed;
+}
+.butterfly {
+  --accent: rgb(152,72,196);
+}
+.elephant {
+  --accent: rgb(189,157,17);
+}
+.fox {
+  --accent: rgb(211,92,1);
+}
+.koala {
+  --accent: rgb(33,129,207);
+}
+.owl {
+  --accent: rgb(55,165,97);
+}
+.tiger {
+  --accent: rgb(194,76,161);
+}
+.note {
+  margin: 0 auto;
+  max-width: 500px;
+  overflow: hidden;
+  position: relative;
+  top: -150px
+}
+.note .icon {
+  display: none;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: -30px;
+  left: -30px;
+  opacity: 0.15;
+}
+.butterfly .icon--butterfly {
+  display: block;
+}
+.elephant .icon--elephant {
+  display: block;
+}
+.fox .icon--fox {
+  display: block;
+}
+.koala .icon--koala {
+  display: block;
+}
+.owl .icon--owl {
+  display: block;
+}
+.tiger .icon--tiger {
+  display: block;
+}
+.note--body {
+  background: #e1dad9;
+  border-radius: 2px 2px 0 0;
+  padding: 30px;
+}
+.note--rip {
+  position: relative;
+  line-height: 0;
+}
+.note--rip img {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.note--rip::after {
+  content: '';
+  position: absolute;
+  clip-path: url(#paperedgeTop);
+  background: #e1dad9;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-1deg)
+}
+.note svg {
+  display: none;
+}
+.note b {
+  display: inline-block;
+  line-height: 100%;
+  border-bottom: 5px solid var(--accent);
+  padding: 0 10px 2px;
+}
+.note--credits {
+  font-size: 10px;
+  text-align: center;
+  max-width: 500px;
+  line-height: 200%;
+  margin: 0 auto;
+}
