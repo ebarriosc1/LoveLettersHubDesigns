@@ -664,6 +664,26 @@ button {
   header .section-bottom-tear {
       top: 99%;
     }
+  .logo-animated {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+  }
+
+  .logo-animated img {
+      margin: 0 auto;
+      display: block;
+      max-width: 100%; /* Ensures the image doesn't overflow */
+  }
+  html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    max-width: 100vw; /* Ensures width doesn't exceed viewport */
+}
+  * {
+    box-sizing: border-box; /* Prevents unexpected width growth */
+    max-width: 100%; /* Ensures nothing overflows */
+  }
   .mySlides {
   }
 }
