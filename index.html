@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/rippedpage.css">
-
+  
   <script defer src="js/clipboard.js"></script>
   <script defer src="js/core.js"></script>
   <script defer src="js/tippy.js"></script>
@@ -32,14 +32,9 @@
       a.appendChild(r);
     })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
   </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75348845-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-75348845-2');
-  </script>
+
+
+
 </head>
 
 <body>
@@ -166,6 +161,26 @@
       </div>
     </div>
   </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("loveLetterForm").addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            let letterContent = document.getElementById("loveLetter").value;
+            let response = await fetch("https://script.google.com/macros/s/AKfycbwifSJdsO8EDwPW1dgHb_p4-yibTJQChFl4zbIIQKH5ga-6ET_54JmsW_Fk2SZbq8YQQw/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ letter: letterContent })
+            });
+
+            document.getElementById("submissionStatus").textContent = response.ok 
+                ? "💖 Your love letter has been saved!" 
+                : "❌ Something went wrong. Try again!";
+            
+            if (response.ok) document.getElementById("loveLetter").value = ""; // Clear input
+        });
+    });
+</script>
 </body>
 
 </html>
