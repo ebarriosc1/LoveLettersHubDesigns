@@ -14,9 +14,7 @@ html {
   font-family: 'Courier Prime', 'Courier New', Courier, monospace, sans-serif;
   scroll-behavior: smooth;
 }
-* {
-  cursor: url("../assets/actions/arrow-pointer.svg"), auto;
-}
+
 body {
   font-size: 1.8rem;
   line-height: 1.7;
@@ -25,7 +23,7 @@ body {
   padding: 0;
   max-width: inherit;
   background: var(--black);
-  cursor: url("../assets/actions/arrow-pointer.svg"), auto;
+  cursor: auto;
 }
 html, body {
   min-height: 100%;
@@ -66,7 +64,7 @@ p {
   color: var(--grey);
 }
 button, a {
-  cursor: url("../assets/actions/arrow-pointer.svg"), auto;
+  cursor: auto;
 }
 video {
   object-fit: cover;
@@ -112,7 +110,6 @@ video {
 }
 .splash-screen::after {
   content: "";
-  background-image: url("../assets/bg-texture-white.png");
   background-size: auto;
   background-repeat: repeat-y;
   position: absolute;
@@ -131,7 +128,7 @@ video {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: url("../assets/actions/arrow-down.svg"), pointer;
+  cursor: url("/assets/actions/down-arrow.svg"), pointer;
 }
 .logo-large, .logo-large img {
   cursor: inherit;
@@ -147,7 +144,6 @@ video {
 }
 .header::after {
   content: "";
-  background-image: url("../assets/bg-texture-tan.png");
   background-size: auto;
   background-repeat: repeat-y;
   position: absolute;
@@ -208,7 +204,7 @@ img.animated {
 }
 .sec-streaming::after {
   content: "";
-  background-image: url("../assets/bg-texture-tan.png");
+
   background-size: auto;
   background-repeat: repeat-y;
   position: absolute;
@@ -253,7 +249,7 @@ img.animated {
   display: flex;
   justify-content: space-between;
   transition: 0.2s;
-  cursor: url("../assets/actions/arrow-pointer.svg"), pointer;
+  cursor: pointer;
   margin-bottom: 0.5em;
   padding: 0.5em;
   text-decoration: none;
@@ -283,7 +279,6 @@ img.animated {
 }
 .sec-about::after {
   content: "";
-  background-image: url("../assets/bg-texture-white.png");
   background-size: auto;
   background-repeat: repeat-y;
   position: absolute;
@@ -313,7 +308,6 @@ img.animated {
 }
 .sec-lookbook::after {
   content: "";
-  background-image: url("../assets/bg-texture-tan.png");
   background-size: auto;
   background-repeat: repeat-y;
   position: absolute;
@@ -405,7 +399,7 @@ footer {
 }
 button {
   font-size: 14px;
-  cursor: url("../assets/actions/arrow-pointer.svg"), pointer;
+  cursor:  fpointer;
 }
 .image-footnote {
   font-size: 0.75em;
