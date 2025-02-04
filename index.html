@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/scale.css" />
+  <link rel="stylesheet" href="css/form.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +20,7 @@
   <script defer src="js/core.js"></script>
   <script defer src="js/tippy.js"></script>
   <script defer src="js/main.js"></script>
+  <script defer src="js/dailydate.js"></script>
   <!-- Hotjar Tracking Code for www.self-seekers.com -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -63,9 +65,9 @@
       </div>
       <nav class="nav">
         <ul>
-          <li class="scrollTo" data-target="stream" data-offset="50">Stream</li>
+          <li class="scrollTo" data-target="stream" data-offset="50">LoveToday</li>
           <li class="scrollTo" data-target="about">About</li>
-          <li class="scrollTo" data-target="lookbook">Lookbook</li>
+          <li class="scrollTo" data-target="lookbook">Submit</li>
         </ul>
       </nav>
     </div>
@@ -75,39 +77,27 @@
   <main>
     <!-- START SECTION 1: COVER ART AND STREAM -->
     <section class="sec-streaming" id="stream">
-      <div class="streaming-inner layout-inner">
+      <div class="sec-about-inner">
+        <h1 style="color: white; text-align: left; word-spacing: .1px; " id="current-date"></h1>
         <div class="cover-art">
           <img src="assets/letter-front.png">
         </div>
-      </div>
-      <div>
-        <div class="note fox">
-          <div class="note--body">
-            <b><i>Hey there fellow campers!</i></b>
-            <p>
-              Just popping a little note up to say you're all fantastically warm, welcoming, and eager to learn and help
-              each other and it's SUCH a great vibe Keep it up! </p>
-            <p>
-              Extra thank you to staff for being so involved and active! It's not always easy work, I'm sure, but
-              it's well worth the effort!
-            </p>
-            <b style="display: block; margin: 0 0 0 auto; max-width: max-content;">&mdash; Lux</b>
-          </div>
-          <div class="note--rip"><img src="/img/paperEdge.png"></div>
+        <h3 style="color: white;">"I look down the tracks and see you coming—and out of every haze & mist your
+          darling rumpled trousers are hurrying to me—Without you, dearest dearest..."</h3>
+        <p style="padding-bottom: 0.5em; color: white;" class="italicize">I couldn’t see or hear or feel or
+          think—or live—I love you so and I’m never in all our lives going to let us be apart another night. It’s like
+          begging for mercy of a storm or killing Beauty or growing old, without you. I want to kiss you so—and in the
+          back where your dear hair starts and your chest—I love you—and I can’t tell you how much—To think that I’ll
+          die without your knowing—Goofo, you’ve got to try [to] feel how much I do—how inanimate I am when you’re
+          gone—I can’t even hate these damnable people—Nobody’s got a right to live but us—and they’re dirtying up our
+          world and I can’t hate them because I want you so—Come Quick—Come Quick to me—Lover, Lover, Darling—Your Wife
+        </p>
+        <div class="attribution">
+          <h4 style="color: antiquewhite;">Zelda Fitzgerald to F. Scott Fitzgerald</h4>
         </div>
-        <svg width="0" height="0" alt="">
-          <clipPath id="paperedgeTop" clipPathUnits="objectBoundingBox">
-            <path fill="#fff"
-              d="M1,1 L0.987,0.954 L0.971,0.911 L0.96,0.893 L0.944,0.894 L0.93,0.81 L0.913,0.741 L0.892,0.676 L0.873,0.621 L0.857,0.569 L0.844,0.515 L0.829,0.532 L0.818,0.529 L0.811,0.493 L0.802,0.474 L0.776,0.357 L0.765,0.349 L0.752,0.382 L0.727,0.239 L0.713,0.227 L0.693,0.227 L0.674,0.248 L0.657,0.254 L0.642,0.303 L0.625,0.312 L0.588,0.358 L0.568,0.347 L0.544,0.392 L0.529,0.465 L0.508,0.514 L0.485,0.535 L0.466,0.541 L0.449,0.501 L0.433,0.386 L0.412,0.385 L0.396,0.381 L0.38,0.31 L0.366,0.285 L0.354,0.304 L0.346,0.289 L0.334,0.248 L0.319,0.261 L0.299,0.33 L0.281,0.384 L0.274,0.383 L0.265,0.366 L0.25,0.364 L0.237,0.352 L0.226,0.354 L0.218,0.402 L0.209,0.43 L0.2,0.423 L0.19,0.353 L0.17,0.305 L0.157,0.283 L0.143,0.286 L0.12,0.232 L0.11,0.189 L0.096,0.189 L0.076,0.2 L0.056,0.186 L0.047,0.191 L0.035,0.208 L0.024,0.208 L0.015,0.203 L0.011,0.19 L0.006,0.195 L0,0.199 L0,0 L1,0 L1,1">
-            </path>
-          </clipPath>
-        </svg>
       </div>
       </div>
 
-      <div class="attribution">
-        <p>Jeremy Ford &mdash; Self Seekers, 2020</p>
-      </div>
       <img class="section-bottom-tear" src="assets/section-bottom-tear-black.png" style="top:100%;">
     </section>
     <!-- End SECTION 1: COVER ART AND STREAM -->
@@ -122,10 +112,11 @@
         </h3>
         <p style="padding-bottom: 0.5em;">Love is a feeling of warmth, a sense of calm, and an immense joy that cannot
           be contained or hidden from those you cherish. Its origins remain a mystery, yet it exists within all of us.
-          When love takes root, it transcends time and space, creating a world within a world—one where only you and
+          When love takes root, it transcends time and space, creating a world within a world where only you and
           your partner exist, while the rest of life lingers just beyond the universe you've built together.</p>
-        <p style="padding-bottom: 0.5em;">This webpage will showcase ordinary love letters from ordinary people,
-          presenting to the world that love has always existed—timeless, universal, and deeply human. </p>
+        <p style="padding-bottom: 0.5em;">This webpage will showcase ordinary love letters from ordinary people everyday without repeating any,
+          presenting to the world that love has always existed timeless, universal, and deeply human. </p>
+        <p style="padding-bottom: 0.5em;">Page dedicated to my girlfriend!</p>
       </div>
       <img class="section-bottom-tear" src="assets/section-bottom-tear-tan.png" style="top:100%;">
     </section>
@@ -136,51 +127,17 @@
       <div class="layout-inner-header">
         <h1>SUMBIT</h1>
       </div>
-      <div class="sec-lookbook-inner">
-        <div class="sec-lookbook-inner-text">
-          <h3 style="text-indent:-10px;">"Identity is a prison you can never escape, but the way to redeem your past is
-            not to run from it, but to try to understand it, and use it as a foundation to grow." (Jay-Z)</h3>
-          <p><span class="italicize">Who Are You Today?</span> is the visual facet of the <span class="italicize">Self
-              Seekers</span> project &mdash; a digital lookbook containing 24 pages of original artwork that express the
-            themes of identity, self-discovery, and anonymity. It is best viewed while listening to the album.</p>
-          <div id="lookbook-modal" class="w3-modal">
-            <div id="lookbook-navigate-right" class="sec-lookbook-overlay overlay-right"></div>
-            <div id="lookbook-navigate-left" class="sec-lookbook-overlay overlay-left"></div>
-            <div class="keyboard-key">
-              <button>Keyboard shortcuts</button>
-              <button class="key-directional"><span>navigate</span></button>
-              <button class="key-close"><span>close</span></button>
-            </div>
-            <button onclick="closeLookbook()" class="close-button">Close</button>
-            <div class="w3-modal-content w3-animate-opacity">
-              <div class="w3-container">
-                <div class="w3-content w3-display-container">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-1.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-2.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-3.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-4.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-5.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-6.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-7.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <img class="mySlides" src="assets/lookbook/lookbook-spread-8.jpg"
-                    alt="Jeremy Ford / Self Seekers lookbook">
-                  <button class="w3-button w3-black w3-display-left sec-lookbook-knob"
-                    onclick="plusDivs(-1)">&#10094;</button>
-                  <button class="w3-button w3-black w3-display-right sec-lookbook-knob"
-                    onclick="plusDivs(1)">&#10095;</button>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="love-letter-form mySlides">
+        <div class="form-container">
+            <h2>Submit Your Anonymous Love Letter 💌</h2>
+            <form id="loveLetterForm">
+                <textarea id="loveLetter" name="loveLetter" placeholder="Write your love letter here..." required></textarea>
+                <br><br>
+                <button type="submit">Submit!</button>
+            </form>
+            <p id="submissionStatus"></p>
         </div>
-      </div>
+    </div>
       <img class="section-bottom-tear" src="assets/section-bottom-tear-white.png">
     </section>
     <!-- END SECTION 3: LOOKBOOK -->
@@ -188,7 +145,7 @@
     <!-- START SECTION 4: QUOTE -->
     <section class="sec-quote">
       <div class="sec-quote-inner">
-        <h1>"</h1>
+        <h1 style="color: red;">"</h1>
         <h2>Love is the one thing we're capable of perceiving that transcends dimensions of time and space</h2>
         <p>Interstellar, Amelia Brand</p>
       </div>
@@ -199,12 +156,12 @@
     <div class="contact">
       <div class="social">
         ©2025 LoveLettersHub
-        <a href="https://instagram.com/jeremyfordmusic" target="_blank">Instagram</a>
+        <!-- <a href="https://instagram.com/jeremyfordmusic" target="_blank">Instagram</a>
         <a href="https://twitter.com/jeremyrford" target="_blank">Twitter</a>
         <a href="https://www.youtube.com/channel/UCWesfKAsZqszM_U-nMJPEZA" target="_blank">YouTube</a>
         <a href="https://www.dribbble.com/jeremyfordesign" target="_blank">Dribbble</a>
         <a id="copyEmail" data-clipboard-text="jeremyfordmusic@gmail.com"
-          data-tippy-content='<span>Email address copied! Paste it into the "to" field of a new email.</span><button>&#10005;</button>'>Email</a>
+          data-tippy-content='<span>Email address copied! Paste it into the "to" field of a new email.</span><button>&#10005;</button>'>Email</a> -->
         <a href="#">TOP &uarr;</a>
       </div>
     </div>
