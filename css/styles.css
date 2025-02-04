@@ -553,7 +553,7 @@ button {
   margin-right: 1em;
 }
 .mySlides {
-  height: 92vh;
+
 }
 
 .keyboard-key {
@@ -665,7 +665,6 @@ button {
       top: 99%;
     }
   .mySlides {
-    height: 70vh;
   }
 }
 
@@ -690,7 +689,7 @@ button {
     top: 99.3%;
   }
   .mySlides {
-    height: 75vh;
+
   }
 }
 
@@ -709,7 +708,7 @@ button {
     top: 98.8%;
   }
   .mySlides {
-    height: 92vh;
+
   }
   .sec-quote-inner {
     padding: 10% 30%;
@@ -740,7 +739,6 @@ button {
     top: 100%;
   }
   .mySlides {
-    height: 92vh;
   }
 }
 
@@ -756,7 +754,7 @@ button {
     display: none;
   }
   .mySlides {
-    height: 92vh;
+
   }
 }
 
